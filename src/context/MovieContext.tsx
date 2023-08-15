@@ -25,7 +25,7 @@ const MovieContextProvider: React.FC<{ children: ReactNode }> = ({ children }) =
 
     const handleEntries = () => {
         setLoading(true);
-        fetch('src/data/feed.json')
+        fetch('../data/feed.json')
             .then(response => response.json())
             .then((data: { entries: Entry[] }) => {
                 console.log(data.entries);
